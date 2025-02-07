@@ -472,6 +472,11 @@
       text-decoration-skip-ink: none;
       width: 592px;
       margin-top: 30px;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        font-size: 24px;
+        line-height: 40px;
+      }
     }
     p {
       color: rgba(255, 255, 255, 1);
@@ -483,6 +488,134 @@
       text-decoration-skip-ink: none;
       width: 681px;
       margin-top: 20px;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+      }
     }
+  }
+  .about-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Rasm va matnlarni ikki ustunga ajratish */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-imgs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-imgs .L {
+    position: absolute;
+    z-index: 1;
+    width: 50%; /* Rasmning o‘lchamini moslash */
+  }
+
+  .about-imgs .gridBox {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .four-texts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 ta ustunda 4 ta blok */
+    gap: 15px;
+  }
+
+  .four-texts div {
+    background: #0d0d0d; /* Qora fon */
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Nozik chegara */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .four-texts h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .four-texts p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+/* From Uiverse.io by Saad3092003 */
+.obj {
+  position: fixed;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  /* background-color: rgb(96, 96, 232); */
+  transform-style: preserve-3d;
+  transition: 0.5s all;
+  transform: rotateX(-25deg) rotateY(20deg);
+}
+
+.objchild {
+  animation: rotate 4s infinite linear;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background:linear-gradient( to top,rgb(11, 11, 102),rgb(96, 96, 232) ) ; */
+}
+
+.objchild::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: rgb(37, 101, 230); */
+  /* background: radial-gradient(center center, farthest-side , #9993, transparent); */
+  filter: blur(20px);
+  // box-shadow: 0 0 200px 15px white;
+  transform: rotateX(90deg) scale(1.1) translateZ(-120px);
+}
+
+.inn6 {
+  position: absolute;
+  width: 80%; /* Rasmni 80% kichraytirish */
+  height: 80%; /* Rasm balandligini moslashtirish */
+  background: url(../components/assets/icon/logoBrend2.jpg) no-repeat center;
+  background-size: contain; /* Rasmni mos hajmga olib kelish */
+  transform: rotateX(90deg) translateZ(100px) scale(0.7); /* 70% ga kichraytirish */
+  animation: updown 4s infinite ease-in-out;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(100px) scale(0.7);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(100px) rotateX(90deg) translateZ(100px);
+  }
+
+  50% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(100px) rotateX(450deg) translateZ(100px);
   }
 }

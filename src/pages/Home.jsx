@@ -5,6 +5,8 @@ import myAvatar from "../components/assets/icon/logo_Brend.jpg";
 import homeAvatarBorder from "../components/assets/img/homeRightImg.svg";
 import signIcon from "../components/assets/icon/sign.svg";
 import bigSign from "../components/assets/icon/bigSign.svg";
+import lawLiet from "../components/assets/icon/logoBrend2.jpg";
+import BoxGrid from "../components/assets/icon/gridBox.svg";
 
 import "./Home.scss";
 
@@ -75,8 +77,10 @@ export class Home extends Component {
                 nostrud exerci tation ullamcorper suscip
               </p>
             </div>
-            <div className="about-three">
-              
+            <div class="obj">
+              <div class="objchild">
+                <span class="inn6"></span>
+              </div>
             </div>
           </div>
         </div>
