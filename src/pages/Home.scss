@@ -456,6 +456,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    img {
+      @media (max-width: 340px) {
+        width: 80px;
+        max-width: 100%;
+      }
+    }
   }
   .about-two {
     display: flex;
@@ -496,126 +502,199 @@
     }
   }
   .about-three {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Rasm va matnlarni ikki ustunga ajratish */
-    align-items: center;
-    gap: 30px;
-  }
+    .obj {
+      position: fixed;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      /* background-color: rgb(96, 96, 232); */
+      transform-style: preserve-3d;
+      transition: 0.5s all;
+      transform: rotateX(-25deg) rotateY(20deg);
+    }
+    .objchild {
+      animation: rotate 4s infinite linear;
+      transform-style: preserve-3d;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background:linear-gradient( to top,rgb(11, 11, 102),rgb(96, 96, 232) ) ; */
+    }
+    .objchild::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background: rgb(37, 101, 230); */
+      /* background: radial-gradient(center center, farthest-side , #9993, transparent); */
+      filter: blur(20px);
+      // box-shadow: 0 0 200px 15px white;
+      transform: rotateX(90deg) scale(1.1) translateZ(-120px);
+    }
+    .inn6 {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      background: url(../components/assets/icon/logoBrend2.jpg) no-repeat center;
+      background-size: contain;
+      transform: rotateX(90deg) translateZ(100px) scale(0.7);
+      animation: updown 4s infinite ease-in-out;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotateX(90deg) translateZ(100px)
+        scale(0.7);
+    }
 
-  .about-imgs {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    @keyframes rotate {
+      0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+      }
 
-  .about-imgs .L {
-    position: absolute;
-    z-index: 1;
-    width: 50%; /* Rasmning o‘lchamini moslash */
-  }
+      100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+      }
+    }
 
-  .about-imgs .gridBox {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-  }
+    @keyframes updown {
+      0% {
+        transform: translateY(100px) rotateX(90deg) translateZ(100px);
+      }
 
-  .four-texts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 ta ustunda 4 ta blok */
-    gap: 15px;
-  }
+      50% {
+        transform: translateY(200px);
+      }
 
-  .four-texts div {
-    background: #0d0d0d; /* Qora fon */
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Nozik chegara */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+      100% {
+        transform: translateY(100px) rotateX(450deg) translateZ(100px);
+      }
+    }
+    .mySocialMedia {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      .card {
+        max-width: fit-content;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+        backdrop-filter: blur(15px);
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+          inset 0 0 5px rgba(255, 255, 255, 0.274),
+          0 5px 5px rgba(0, 0, 0, 0.164);
+        transition: 0.5s;
+        @media (max-width: 468px) {
+          margin: 0 auto;
+        }
+      }
 
-  .four-texts h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
+      .card:hover {
+        animation: ease-out 5s;
+        background: rgba(173, 173, 173, 0.05);
+      }
 
-  .four-texts p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-}
-/* From Uiverse.io by Saad3092003 */
-.obj {
-  position: fixed;
-  top: 50%;
-  width: 200px;
-  height: 200px;
-  /* background-color: rgb(96, 96, 232); */
-  transform-style: preserve-3d;
-  transition: 0.5s all;
-  transform: rotateX(-25deg) rotateY(20deg);
-}
+      .card ul {
+        padding: 1rem;
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @media (max-width: 468px) {
+          display: flex;
+          flex-direction: row;
+        }
+      }
 
-.objchild {
-  animation: rotate 4s infinite linear;
-  transform-style: preserve-3d;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* background:linear-gradient( to top,rgb(11, 11, 102),rgb(96, 96, 232) ) ; */
-}
+      .card ul li {
+        cursor: pointer;
+      }
 
-.objchild::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* background: rgb(37, 101, 230); */
-  /* background: radial-gradient(center center, farthest-side , #9993, transparent); */
-  filter: blur(20px);
-  // box-shadow: 0 0 200px 15px white;
-  transform: rotateX(90deg) scale(1.1) translateZ(-120px);
-}
+      .svg {
+        transition: all 0.3s;
+        /* if you find some problems change w - h : 30px*/
+        padding: 1rem;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        color: rgb(255, 255, 255);
+        fill: currentColor;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+          inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+      }
 
-.inn6 {
-  position: absolute;
-  width: 80%; /* Rasmni 80% kichraytirish */
-  height: 80%; /* Rasm balandligini moslashtirish */
-  background: url(../components/assets/icon/logoBrend2.jpg) no-repeat center;
-  background-size: contain; /* Rasmni mos hajmga olib kelish */
-  transform: rotateX(90deg) translateZ(100px) scale(0.7); /* 70% ga kichraytirish */
-  animation: updown 4s infinite ease-in-out;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform-origin: center;
-  transform: translate(-50%, -50%) rotateX(90deg) translateZ(100px) scale(0.7);
-}
+      .text {
+        font-size: 12px;
+        opacity: 0;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 5px;
+        transition: all 0.3s;
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
+        z-index: 9999;
+        box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+          -10px 0 1px rgba(153, 153, 153, 0.2),
+          inset 0 0 20px rgba(255, 255, 255, 0.3),
+          inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+      }
 
-@keyframes rotate {
-  0% {
-    transform: rotate3d(0, 1, 0, 0deg);
-  }
+      /*isometric prooyection*/
+      .iso-pro {
+        transition: 0.5s;
+      }
+      .iso-pro:hover a > .svg {
+        transform: translate(15px, -15px);
+        border-radius: 100%;
+      }
 
-  100% {
-    transform: rotate3d(0, 1, 0, 360deg);
-  }
-}
+      .iso-pro:hover .text {
+        opacity: 1;
+        transform: translate(15px, -2px) skew(-5deg);
+      }
 
-@keyframes updown {
-  0% {
-    transform: translateY(100px) rotateX(90deg) translateZ(100px);
-  }
+      .iso-pro:hover .svg {
+        transform: translate(5px, -5px);
+      }
 
-  50% {
-    transform: translateY(200px);
-  }
+      .iso-pro span {
+        opacity: 0;
+        position: absolute;
+        color: #1877f2;
+        border-color: #1877f2;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+          inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+        border-radius: 50%;
+        transition: all 0.3s;
+        height: 40px;
+        width: 40px;
+      }
 
-  100% {
-    transform: translateY(100px) rotateX(450deg) translateZ(100px);
+      .iso-pro:hover span {
+        opacity: 1;
+      }
+
+      .iso-pro:hover span:nth-child(1) {
+        opacity: 0.2;
+      }
+
+      .iso-pro:hover span:nth-child(2) {
+        opacity: 0.4;
+        transform: translate(5px, -5px);
+      }
+
+      .iso-pro:hover span:nth-child(3) {
+        opacity: 0.6;
+        transform: translate(10px, -10px);
+      }
+    }
   }
 }
