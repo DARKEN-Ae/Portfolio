@@ -7,7 +7,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 import BackgroundMusic from "./components/BackgroundMusic";
 
 const HomePage = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
 
 function App() {
   return (
@@ -22,14 +21,6 @@ function App() {
               element={
                 <Suspense fallback={<Loading />}>
                   <HomePage />
-                </Suspense>
-              }
-            />
-            <Route
-              index
-              element={
-                <Suspense fallback={<Loading />}>
-                  <About />
                 </Suspense>
               }
             />
