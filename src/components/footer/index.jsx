@@ -75,7 +75,7 @@ class Footer extends Component {
                 <div className="my_links">
                   <div className="my-connects">
                     <h5>Phone :</h5>
-                    <p>+998(95-255-70-05)</p>
+                    <p>+998(95-255-70-**)</p>
                   </div>
                   <div className="my-connects">
                     <h5>Address :</h5>
