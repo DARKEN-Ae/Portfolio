@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./NotFound.scss";
+import "./sass/NotFound.scss";
 import { Link } from "react-router-dom";
 
 export class NotFoundPage extends Component {

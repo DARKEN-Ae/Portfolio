@@ -15,5 +15,23 @@
 }
 html,
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat";
+}
+body {
+  background: rgba(40, 40, 40, 1);
+  background-image: url(./components/assets/img/background-texture.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: moveBackground 50s linear infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
 }

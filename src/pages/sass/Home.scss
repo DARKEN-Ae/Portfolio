@@ -1,10 +1,4 @@
 .section-one {
-  background: rgba(40, 40, 40, 1);
-  background-image: url(../components/assets/img/background-texture.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: moveBackground 50s linear infinite alternate;
   .home_section {
     display: flex;
     align-items: center;
@@ -434,24 +428,9 @@
       }
     }
   }
-  @keyframes moveBackground {
-    0% {
-      background-position: center top;
-    }
-    100% {
-      background-position: center bottom;
-    }
-  }
 }
-
 // 2
 .section-two {
-  background: rgba(40, 40, 40, 1);
-  background-image: url(../components/assets/img/background-texture.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: moveBackground 50s linear infinite alternate;
   padding-top: 50px;
   .about-top {
     display: flex;
@@ -510,7 +489,7 @@
       padding: 20px;
       // background: #111;
       color: #fff;
-      min-height: 100vh;
+      min-height: 60vh;
       @media (max-width: 1067px) {
         flex-direction: column;
         align-items: center;
@@ -520,12 +499,14 @@
 
     .main-section {
       width: 50%;
-      height: 400px;
-      background: url(../components/assets/icon/logoBrend2.jpg);
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      height: 350px;
+      background: url(../../components/assets/icon/logoBrend2.jpg);
+      // border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
       display: flex;
       align-items: center;
       background-repeat: no-repeat;
+      background-size: contain;
       justify-content: center;
       @media (max-width: 1067px) {
         width: 100%;
@@ -584,7 +565,8 @@
       position: absolute;
       width: 80%;
       height: 80%;
-      background: url(../components/assets/icon/logoBrend2.jpg) no-repeat center;
+      background: url(../../components/assets/icon/logoBrend2.jpg) no-repeat
+        center;
       background-size: contain;
       transform: rotateX(90deg) translateZ(100px) scale(0.7);
       animation: updown 4s infinite ease-in-out;

@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import "./Footer.scss";
 import { Link } from "react-router-dom";
 
-// Telegramga xabar yuborish uchun ma'lumotlar
-const BOT_TOKEN = "7761472526:AAG4llldleTeQ-glw-2TmuUlLYw1zhnINrM"; // Telegram bot token
-const CHAT_ID = "-4665797146"; // Telegram chat ID (Admin yoki guruh ID)
+const BOT_TOKEN = "7761472526:AAG4llldleTeQ-glw-2TmuUlLYw1zhnINrM";
+const CHAT_ID = "-4665797146";
 
-// SubscribeForm komponenti (alohida komponent sifatida)
 class SubscribeForm extends Component {
   constructor(props) {
     super(props);
@@ -59,7 +57,6 @@ class SubscribeForm extends Component {
   }
 }
 
-// Footer komponenti
 class Footer extends Component {
   render() {
     return (
@@ -69,9 +66,7 @@ class Footer extends Component {
           <div className="footer_contents">
             <div className="footer-content">
               <div className="sasdad">
-                {/* SubscribeForm komponentini chaqirish */}
                 <SubscribeForm />
-
                 <div className="my_links">
                   <div className="my-connects">
                     <h5>Phone :</h5>

@@ -48,7 +48,7 @@ class Header extends Component {
                 <Link to={"/"}>HOME</Link>
               </li>
               <li>
-                <Link to={"/"}>ABOUT ME</Link>
+                <Link to={"/#about"}>ABOUT ME</Link>
               </li>
               <li>
                 <Link to={"/"}>AE PRESSETS</Link>
@@ -70,6 +70,7 @@ class Header extends Component {
             </div>
           </nav>
           <hr />
+          {/* nav-2 */}
           <div className="nav-two">
             <ul class="example-1">
               <li class="icon-content">
