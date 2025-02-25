@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { Link } from "react-router-dom";
 
 const BOT_TOKEN = "7761472526:AAG4llldleTeQ-glw-2TmuUlLYw1zhnINrM";
-const CHAT_ID = "-4665797146";
+const CHAT_ID = "-1002270365558";
 
 class SubscribeForm extends Component {
   constructor(props) {

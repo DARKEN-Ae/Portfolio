@@ -80,30 +80,30 @@ export class NotFoundPage extends Component {
               </div>
             </div>
             <Link to={"/"}>
-              <button class="animated-button">
+              <button className="animated-button">
                 <svg
                   viewBox="0 0 24 24"
-                  class="arr-2"
+                  className="arr-2"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                 </svg>
-                <span class="text">Back to Home</span>
-                <span class="circle"></span>
+                <span className="text">Back to Home</span>
+                <span className="circle"></span>
                 <svg
                   viewBox="0 0 24 24"
-                  class="arr-1"
+                  className="arr-1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                 </svg>
               </button>
             </Link>
-            <div class="card">
-              <div class="wrap">
-                <div class="terminal">
-                  <hgroup class="head">
-                    <p class="title">
+            <div className="card">
+              <div className="wrap">
+                <div className="terminal">
+                  <hgroup className="head">
+                    <p className="title">
                       <svg
                         width="16px"
                         height="16px"
@@ -121,7 +121,7 @@ export class NotFoundPage extends Component {
                       DARKEN AE
                     </p>
 
-                    <button class="copy_toggle" tabindex="-1" type="button">
+                    <button className="copy_toggle" tabindex="-1" type="button">
                       <svg
                         width="16px"
                         height="16px"
@@ -140,12 +140,12 @@ export class NotFoundPage extends Component {
                     </button>
                   </hgroup>
 
-                  <div class="body">
-                    <pre class="pre">
+                  <div className="body">
+                    <pre className="pre">
                       <code>-&nbsp;</code>
                       <code>AE&nbsp;</code>
                       <code
-                        class="cmd"
+                        className="cmd"
                         data-cmd="You are the best EDITOR."
                       ></code>
                     </pre>

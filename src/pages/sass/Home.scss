@@ -733,3 +733,183 @@
   }
 }
 // 3
+.section-three {
+  .slick-dots {
+    bottom: -30px; /* Pastroqqa tushirish */
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px; /* Dot hajmini kichraytirish */
+    color: gray; /* Oddiy dot rangi */
+    opacity: 0.7;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: white; /* Aktiv dot rangi */
+    opacity: 1;
+  }
+
+  .custom-dot {
+    width: 16.6477508544922px;
+    height: 16.64779090881349px;
+    rotate: 90deg;
+    background-color: rgba(255, 169, 235, 1);
+    margin: 5px;
+  }
+  .slick-dots li.slick-active .custom-dot {
+    background-color: white;
+  }
+  .pack {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .pressets-top-texts {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      position: relative;
+      @media (max-width: 440px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .lorem-ip {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @media (max-width: 655px) {
+          gap: 5px;
+        }
+        @media (max-width: 440px) {
+          margin: 0 auto;
+          align-items: center;
+        }
+        span {
+          color: rgba(255, 169, 235, 1);
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20.88px;
+          letter-spacing: 0%;
+          @media (max-width: 655px) {
+            font-size: 14px;
+          }
+        }
+        p {
+          width: 200px;
+          color: rgba(255, 255, 255, 1);
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16.24px;
+          @media (max-width: 845px) {
+            width: 150px;
+            font-size: 10px;
+          }
+          @media (max-width: 655px) {
+            font-size: 8px;
+          }
+          @media (max-width: 537px) {
+            width: 100px;
+          }
+          @media (max-width: 440px) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+      h2 {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 300;
+        font-size: 45px;
+        line-height: 52.2px;
+        letter-spacing: 0%;
+        text-align: center;
+        @media (max-width: 845px) {
+          font-size: 35px;
+        }
+        @media (max-width: 655px) {
+          font-size: 30px;
+        }
+        @media (max-width: 537px) {
+          font-size: 25px;
+        }
+        @media (max-width: 440px) {
+          text-align: center;
+        }
+      }
+      img {
+        @media (max-width: 845px) {
+          width: 70px;
+        }
+        @media (max-width: 655px) {
+          width: 50px;
+        }
+        @media (max-width: 537px) {
+          width: 30px;
+        }
+        @media (max-width: 440px) {
+          position: absolute;
+          right: 0;
+          top: 68px;
+        }
+      }
+    }
+  }
+  .packs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .slick-track {
+      @media (max-width: 1180px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    .pack-card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .pack-card-img {
+        position: relative;
+        .avatar-img {
+          position: absolute;
+          width: 334px;
+          height: 359px;
+          left: 19px;
+          top: 19px;
+          z-index: -11;
+          border-end-end-radius: 58px;
+          border-end-start-radius: 88px;
+        }
+      }
+      .pack-card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        span {
+          color: rgba(255, 169, 235, 1);
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20.88px;
+          letter-spacing: 0%;
+        }
+        p {
+          color: rgba(255, 255, 255, 1);
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16.24px;
+          letter-spacing: 0%;
+          width: 343px;
+        }
+        a {
+          color: rgba(255, 255, 255, 1);
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20.88px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
